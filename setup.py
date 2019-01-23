@@ -9,7 +9,7 @@ def readme():
 setup(
     name = 'executiontime',
     packages = ['executiontime'],
-    version = '0.1',
+    version = '0.1.1',
     description = 'Utilities to show execution time during development of a module',
     long_description = readme(),
     classifiers = [
