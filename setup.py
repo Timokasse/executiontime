@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
 
 """
-This allows to build the package and deploy it in PyPi:
+This allows to build the package, deploy it in PyPi and tag the source in GitHub:
 
 > pip install -r requirements.txt
 > rm -rf dist
 > ./setup.py sdist bdist_wheel
 > twine upload dist/*
+> git patch v0.3.0
+> pit push origin --tags
 
 """
 
