@@ -6,16 +6,16 @@ Basic demo program for the executiontime decorator.
 from time import sleep
 from logging import basicConfig, info, INFO
 
-from executiontime import printexecutiontime
+from executiontime import printexecutiontime, LIGHTBLACK, LIGHBLUE
 
-@printexecutiontime('Test function executes in {0}')
+@printexecutiontime('Test function executes in {0}', color=LIGHTBLACK)
 def myfunction():
     """
     The function we want to know the execution time of.
     """
     sleep(0.5)
 
-@printexecutiontime('Test function executes in {0}', display=info)
+@printexecutiontime('Test function executes in {0}', color=LIGHBLUE, display=info)
 def myfunction2():
     """
     The function we want to know the execution time of.

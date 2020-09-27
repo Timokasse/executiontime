@@ -20,7 +20,7 @@ README = (HERE / "README.md").read_text()
 setup(
     name = 'executiontime',
     packages = find_packages(),
-    version = '0.2.0',
+    version = '0.3.0',
     description = 'Utilities to show execution time during development of a module',
     long_description = README,
     long_description_content_type = "text/markdown",
@@ -41,6 +41,7 @@ setup(
     keywords = ['testing', 'logging', 'time', 'performance', 'execution'],
     license='MIT',
     install_requires=[
+        'colorama'
     ],
     include_package_data=True,
     zip_safe=False,
