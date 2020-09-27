@@ -1,17 +1,19 @@
 #!/usr/bin/env python
 
-from setuptools import setup
+from pathlib import Path
+from setuptools import find_packages, setup
 
-def readme():
-    with open('README.md') as readmemd:
-        return readmemd.read()
+HERE = Path(__file__).parent
+
+README = (HERE / "README.md").read_text()
 
 setup(
     name = 'executiontime',
-    packages = ['executiontime'],
-    version = '0.1.1',
+    packages = find_packages(),
+    version = '0.1.2',
     description = 'Utilities to show execution time during development of a module',
-    long_description = readme(),
+    long_description = README,
+    long_description_content_type = "text/markdown",
     classifiers = [
         'Development Status :: 3 - Alpha',
         'Environment :: Console',
@@ -22,11 +24,11 @@ setup(
         'Programming Language :: Python :: 3',
         'Topic :: Software Development :: Testing',
     ],
-    author = 'Pierre Cart-Grandjean',
-    author_email = 'timok@free.fr',
+    author = 'Timokasse',
+    author_email = 'Timokasse@users.noreply.github.com',
     url = 'https://github.com/Timokasse/executiontime',
     download_url = 'https://github.com/Timokasse/executiontime/tarball/0.1', # I'll explain this in a second
-    keywords = ['testing', 'logging', 'time'],
+    keywords = ['testing', 'logging', 'time', 'performance', 'execution'],
     license='MIT',
     install_requires=[
     ],
