@@ -2,6 +2,7 @@
 Defines the printexecutiontime decorator
 """
 from datetime import datetime
+from functools import wraps
 
 from colorama import Fore
 
@@ -22,7 +23,7 @@ RED = Fore.RED
 WHITE = Fore.WHITE
 YELLOW = Fore.YELLOW
 
-def printexecutiontime(message, display=print, color=None):
+def printexecutiontime(message, output=print, color=None):
     '''
     This function returns a decorator. This allows to have a decorator that accepts parameters.
     message: A string with a '{0}' placeholder for the time that will be sent to the console.
@@ -31,6 +32,7 @@ def printexecutiontime(message, display=print, color=None):
         '''
         The decorator itself returns a wrapper function that will replace the original one.
         '''
+        @wraps(function)
         def wrapper(*args, **kwargs):
             '''
             This wrapper calculates and displays the execution time of the function.
@@ -41,7 +43,7 @@ def printexecutiontime(message, display=print, color=None):
             msg = message.format(elapsed)
             if color:
                 msg = color + msg + Fore.RESET
-            display(msg)
+            output(msg)
             return value
         return wrapper
     return decorator

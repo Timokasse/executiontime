@@ -22,7 +22,7 @@ README = (HERE / "README.md").read_text()
 setup(
     name = 'executiontime',
     packages = find_packages(),
-    version = '0.3.0',
+    version = '0.3.1',
     description = 'Utilities to show execution time during development of a module',
     long_description = README,
     long_description_content_type = "text/markdown",
