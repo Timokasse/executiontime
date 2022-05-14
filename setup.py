@@ -7,7 +7,7 @@ This allows to build the package, deploy it in PyPi and tag the source in GitHub
 > rm -rf dist
 > ./setup.py sdist bdist_wheel
 > twine upload dist/*
-> git patch v0.3.0
+> git tag v0.3.0
 > pit push origin --tags
 
 """
