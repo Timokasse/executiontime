@@ -1,5 +1,0 @@
-colorama
-pylint
-wheel
-twine
-setuptools

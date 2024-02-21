@@ -3,6 +3,7 @@ Defines the printexecutiontime decorator
 """
 from datetime import datetime
 from functools import wraps
+from typing import Any, Callable, Optional
 
 from colorama import Fore
 
@@ -23,17 +24,17 @@ RED = Fore.RED
 WHITE = Fore.WHITE
 YELLOW = Fore.YELLOW
 
-def printexecutiontime(message, output=print, color=None):
+def printexecutiontime(message: str, output: Callable[..., None] =print, color:Optional[str]=None)->Any:
     '''
     This function returns a decorator. This allows to have a decorator that accepts parameters.
     message: A string with a '{0}' placeholder for the time that will be sent to the console.
     '''
-    def decorator(function):
+    def decorator(function: Callable[..., Any])->Any:
         '''
         The decorator itself returns a wrapper function that will replace the original one.
         '''
         @wraps(function)
-        def wrapper(*args, **kwargs):
+        def wrapper(*args: Any, **kwargs: Any)->Any:
             '''
             This wrapper calculates and displays the execution time of the function.
             '''

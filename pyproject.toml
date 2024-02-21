@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "executiontime"
+version = "0.3.2"
+description = "A simple function decorator to display its execution time on the console or in the logs."
+authors = ["Timokasse <Timokasse@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: French",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Testing",
+]
+keywords = ["testing", "logging", "time", "performance", "execution"]
+packages = [
+    { include = "executiontime" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+colorama = "^0.4.6"
+
+
+[tool.poetry.group.dev.dependencies]
+pylint = "^3.0.3"
+black = "^24.2.0"
+mypy = "^1.8.0"
+types-colorama = "^0.4.15.20240205"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+strict = true
