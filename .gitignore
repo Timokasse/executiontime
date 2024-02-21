@@ -3,3 +3,4 @@
 /executiontime.egg-info/
 /venv/
 __pycache__/
+/secrets.sh
