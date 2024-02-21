@@ -16,9 +16,7 @@ classifiers = [
     "Topic :: Software Development :: Testing",
 ]
 keywords = ["testing", "logging", "time", "performance", "execution"]
-packages = [
-    { include = "executiontime" }
-]
+packages = [{ include = "executiontime" }]
 
 [tool.poetry.dependencies]
 python = "^3.11"
@@ -37,3 +35,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.mypy]
 strict = true
+
+[tool.pylint.format]
+# Maximum number of characters on a single line.
+max-line-length = 160
