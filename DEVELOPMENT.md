@@ -23,3 +23,19 @@ Again with Poetry:
 ```bash
 poetry run pytest tests
 ```
+
+## Linter
+
+We use `pylint`:
+
+```bash
+poetry run pylint executiontime
+```
+
+## Typing
+
+We use `mypy`:
+
+```bash
+poetry run mypy executiontime
+```
