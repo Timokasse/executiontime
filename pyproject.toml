@@ -28,6 +28,7 @@ pylint = "^3.0.3"
 black = "^24.2.0"
 mypy = "^1.8.0"
 types-colorama = "^0.4.15.20240205"
+pytest = "^8.0.1"
 
 [build-system]
 requires = ["poetry-core"]
