@@ -13,20 +13,20 @@ from executiontime import printexecutiontime
 
 class TestExecutionTime(TestCase):
 
-    def test_decorator(self):
+    def test_decorator(self) -> None:
         @printexecutiontime("Time spent: {0}")
-        def my_function():
+        def my_function() -> None:
             """Just a little sleep"""
             sleep(0.1)
 
         self.assertEqual(my_function.__name__, "my_function")
         self.assertEqual(my_function.__doc__, "Just a little sleep")
 
-    def test_output(self):
+    def test_output(self) -> None:
         output = MagicMock()
 
         @printexecutiontime("Time spent: {0}", output=output)
-        def my_function():
+        def my_function() -> None:
             """Just a little sleep"""
             sleep(0.1)
 
