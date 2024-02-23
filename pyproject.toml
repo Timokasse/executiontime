@@ -19,7 +19,7 @@ keywords = ["testing", "logging", "time", "performance", "execution"]
 packages = [{ include = "executiontime" }]
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.9"
 colorama = "^0.4.6"
 
 
