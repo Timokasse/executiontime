@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "executiontime"
-version = "0.3.6"
+version = "0.4.0"
 description = "A simple function decorator to display its execution time on the console or in the logs."
 authors = ["Timokasse <Timokasse@users.noreply.github.com>"]
 license = "MIT"
