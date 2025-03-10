@@ -6,5 +6,13 @@
     "editor.formatOnSave": true,
     "black-formatter.args": [
         "--line-length=160"
+    ],
+    "cSpell.words": [
+        "colorama",
+        "executiontime",
+        "mypy",
+        "pylint",
+        "pytest",
+        "Timokasse"
     ]
 }
