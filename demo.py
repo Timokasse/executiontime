@@ -9,7 +9,7 @@ from executiontime import printexecutiontime, LIGHTBLACK, LIGHBLUE
 
 
 @printexecutiontime("Test function executes in {0}", color=LIGHTBLACK)
-def myfunction():
+def my_function() -> None:
     """
     The function we want to know the execution time of.
     """
@@ -17,7 +17,7 @@ def myfunction():
 
 
 @printexecutiontime("Test function executes in {0}", color=LIGHBLUE, output=info)
-def myfunction2():
+def my_function2() -> None:
     """
     The function we want to know the execution time of.
     """
@@ -26,5 +26,5 @@ def myfunction2():
 
 if __name__ == "__main__":
     basicConfig(level=INFO)
-    myfunction()
-    myfunction2()
+    my_function()
+    my_function2()
