@@ -12,6 +12,8 @@
         "executiontime",
         "mypy",
         "pylint",
+        "pypi",
+        "pyproject",
         "pytest",
         "Timokasse"
     ]
