@@ -2,7 +2,7 @@
 Defines the printexecutiontime decorator
 """
 
-from datetime import datetime
+from datetime import datetime, UTC
 from functools import wraps
 from typing import Callable, ParamSpec, Optional, TypeVar
 
@@ -45,9 +45,9 @@ def printexecutiontime(message: str, output: Callable[..., None] = print, color:
             """
             This wrapper calculates and displays the execution time of the function.
             """
-            start = datetime.utcnow()
+            start = datetime.now(tz=UTC)
             value = function(*args, **kwargs)
-            elapsed = datetime.utcnow() - start
+            elapsed = datetime.now(tz=UTC) - start
             msg = message.format(elapsed)
             if color:
                 msg = color + msg + Fore.RESET
