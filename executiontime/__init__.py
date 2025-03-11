@@ -2,7 +2,7 @@
 Defines the printexecutiontime decorator
 """
 
-from datetime import datetime, UTC
+from datetime import datetime
 from functools import wraps
 from typing import Callable, ParamSpec, Optional, TypeVar
 
@@ -50,9 +50,9 @@ def printexecutiontime(
             """
             This wrapper calculates and displays the execution time of the function.
             """
-            start = datetime.now(tz=UTC)
+            start = datetime.now()
             value = function(*args, **kwargs)
-            elapsed = datetime.now(tz=UTC) - start
+            elapsed = datetime.now() - start
             if message is None:
                 msg = f"{function.__module__}.{function.__name__} executed in {elapsed}"
             else:
