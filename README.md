@@ -15,6 +15,7 @@ pip install executiontime
 ## Usage
 
 You simply need to decorate the function and specify a message template.
+If you do not provide a message, one will be created for you based on the names of the decorated function and its module.
 
 ```python
 from executiontime import printexecutiontime
@@ -55,3 +56,11 @@ def my_function():
 if __name__ == '__main__':
     my_function()
 ```
+
+## Changelog
+
+- v0.4.1
+  - The message is now optional and a default one is provided, based on the names of the decorated function and its module.
+- v0.4.0
+  - Refresh the dependencies
+  - Replace deprecated datetime.utcnow()

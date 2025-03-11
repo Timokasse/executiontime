@@ -29,10 +29,15 @@ P = ParamSpec("P")
 T = TypeVar("T")
 
 
-def printexecutiontime(message: str, output: Callable[..., None] = print, color: Optional[str] = None) -> Callable[[Callable[P, T]], Callable[P, T]]:
+def printexecutiontime(
+    message: Optional[str] = None, output: Callable[..., None] = print, color: Optional[str] = None
+) -> Callable[[Callable[P, T]], Callable[P, T]]:
     """
     This function returns a decorator. This allows to have a decorator that accepts parameters.
     message: A string with a '{0}' placeholder for the time that will be sent to the console.
+        If none is provided, we will use a default message with the module's and functions's names.
+    output: A function to send the message. By default we use 'print' that sends the message to the console.
+    color: One of the constant string provided in this module to color the message.
     """
 
     def decorator(function: Callable[P, T]) -> Callable[P, T]:
@@ -48,7 +53,10 @@ def printexecutiontime(message: str, output: Callable[..., None] = print, color:
             start = datetime.now(tz=UTC)
             value = function(*args, **kwargs)
             elapsed = datetime.now(tz=UTC) - start
-            msg = message.format(elapsed)
+            if message is None:
+                msg = f"{function.__module__}.{function.__name__} executed in {elapsed}"
+            else:
+                msg = message.format(elapsed)
             if color:
                 msg = color + msg + Fore.RESET
             output(msg)

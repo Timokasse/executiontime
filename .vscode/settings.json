@@ -24,6 +24,7 @@
         "pypi",
         "pyproject",
         "pytest",
-        "Timokasse"
+        "Timokasse",
+        "utcnow"
     ]
 }
