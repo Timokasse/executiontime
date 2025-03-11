@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "executiontime"
-version = "0.4.1"
+version = "0.4.2"
 description = "A simple function decorator to display its execution time on the console or in the logs."
 authors = ["Timokasse <Timokasse@users.noreply.github.com>"]
 license = "MIT"
@@ -24,11 +24,11 @@ colorama = "^0.4.6"
 
 
 [tool.poetry.group.dev.dependencies]
-pylint = "^3.0.3"
+pylint = "^3.3.5"
 black = "^25.1.0"
-mypy = "^1.8.0"
-types-colorama = "^0.4.15.20240205"
-pytest = "^8.0.1"
+mypy = "^1.15.0"
+types-colorama = "^0.4.15.20240311"
+pytest = "^8.3.5"
 
 [build-system]
 requires = ["poetry-core"]
