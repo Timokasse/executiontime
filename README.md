@@ -59,6 +59,12 @@ if __name__ == '__main__':
 
 ## Changelog
 
+- v0.4.4
+  - No need of a time zone to calculate an elapsed time.
+- v0.4.3
+  - Improve `publish.sh` script to get current PyPI version.
+- v0.4.2
+  - Update dependencies
 - v0.4.1
   - The message is now optional and a default one is provided, based on the names of the decorated function and its module.
 - v0.4.0
