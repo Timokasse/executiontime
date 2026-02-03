@@ -45,6 +45,7 @@ poetry run mypy --strict executiontime
 There is no CI/CD in place for `executiontime`. The publishing will be done manually with the help of the script `publish.sh`.
 
 It requires a PyPI API token and store it in `PYPI_API_TOKEN` environment variable with the help of the `secrets.sh` file not to be stored in the git repository.
+This token is created from PyPI in the settings of the [executiontime](https://pypi.org/manage/project/executiontime/settings/) project.
 
 In order to publish the next patch version, directly call the script:
 

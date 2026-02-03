@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Make sure to exit in case of error
+set -e
+
 # Check if we are on the master branch
 branch=$(git branch --show-current)
 if [[ $branch != "master" ]]; then
