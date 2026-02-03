@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "executiontime"
-version = "0.4.4"
+version = "0.4.5"
 description = "A simple function decorator to display its execution time on the console or in the logs."
 authors = ["Timokasse <Timokasse@users.noreply.github.com>"]
 license = "MIT"
@@ -12,23 +12,26 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Natural Language :: French",
     "Operating System :: OS Independent",
-    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
     "Topic :: Software Development :: Testing",
 ]
 keywords = ["testing", "logging", "time", "performance", "execution"]
 packages = [{ include = "executiontime" }]
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.11"
 colorama = "^0.4.6"
 
 
 [tool.poetry.group.dev.dependencies]
-pylint = "^3.3.5"
-black = "^25.1.0"
+pylint = "^4.0.4"
+black = "^26.1.0"
 mypy = "^1.15.0"
 types-colorama = "^0.4.15.20240311"
-pytest = "^8.3.5"
+pytest = "^9.0.2"
 
 [build-system]
 requires = ["poetry-core"]

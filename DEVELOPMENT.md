@@ -37,7 +37,7 @@ poetry run pylint executiontime
 We use `mypy`:
 
 ```bash
-poetry run mypy executiontime
+poetry run mypy --strict executiontime
 ```
 
 ## Deploying a new version on PyPI
