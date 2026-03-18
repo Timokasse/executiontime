@@ -59,6 +59,10 @@ if __name__ == '__main__':
 
 ## Changelog
 
+- v0.4.6
+  - Update dependencies
+- v0.4.5
+  - The minimum Python version is now 3.11 up to 3.14
 - v0.4.4
   - No need of a time zone to calculate an elapsed time.
 - v0.4.3
